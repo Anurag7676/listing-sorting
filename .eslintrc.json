@@ -1,0 +1,58 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react-hooks"],
+  "settings":{
+    "react":{
+        "version":"detect"
+    }
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "indent": 0,
+    "quotes": 0,
+    "valid-jsdoc": 0,
+    "linebreak-style": [2, "unix"],
+    "semi": 0,
+    "no-underscore-dangle": 0,
+    "key-spacing": 0,
+    "keyword-spacing": 0,
+    "react/prop-types": 0,
+    "no-use-before-define": 0,
+    "no-unused-vars": 0,
+    "no-undefined": 0,
+    "no-new": 0,
+    "camelcase": 0,
+    "yoda": 0,
+    "no-undef": "error",
+    "default-case": "error",
+    "curly": "error",
+    "brace-style": "error",
+    "no-cond-assign": "error",
+    "react/display-name": 0,
+    "spaced-comment": [2, "always"],
+    "space-before-function-paren": [
+      2,
+      { "anonymous": "always", "named": "never" }
+    ],
+    "space-before-blocks": [2, "always"],
+    "semi-spacing": [2, { "before": false, "after": true }],
+    "no-var": 2,
+    "object-shorthand": [2, "always"],
+    "prefer-const": 2,
+    "prefer-template": "error",
+    "eqeqeq": ["error", "smart"],
+    "no-duplicate-imports": "error"
+  },
+  "parser": "@babel/eslint-parser",
+  "globals": {
+    "window": true,
+    "document": true,
+    "navigator": true,
+    "getComputedStyle": true,
+    "parent": true,
+    "fetch": true,
+    "btoa": true,
+    "console":true
+  }
+}
