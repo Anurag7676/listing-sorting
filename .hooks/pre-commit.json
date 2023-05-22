@@ -1,8 +1,8 @@
 {
   "steps": [
     {
-      "name": "Example hook",
-      "command": "echo \"Hello world!\""
+      "name": "common hook",
+      "command": "npm run lint"
     }
   ]
 }

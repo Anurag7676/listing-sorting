@@ -1,11 +1,15 @@
 import './App.css'
-import React, { lazy, Suspense } from 'react'
+import React, { useState, lazy, Suspense } from 'react'
+import Listing from './components/SortablList'
+
+
 import { Routes, Route } from 'react-router-dom'
 // import Home from './components/Home/index'
 // import Player from './components/Player/index'
 // import Product from './components/Product/index'
 // import TestComp from './components/TestC/TestComp'
 import Header from './components/Header'
+import List from './components/SortablList/List'
 const Home = lazy(() =>
   import('./components/Home/index' /* webpackChunkName: "HomeChunk" */)
 )
@@ -16,16 +20,19 @@ const Product = lazy(() =>
   import('./components/Product/index' /* webpackChunkName: "ProductChunk" */)
 )
 const TestComp = lazy(() =>
-  import( 
+  import(
     './components/TestC/TestComp'
     /* webpackChunkName: "TestCompChunk" */
   )
 )
 
 function App() {
+  const [items, setItems] = useState(['Apple', 'Banana', 'Orange', 'Mango'])
+
   return (
     <div>
-      <Header/>
+      <Header />
+     <List/>
       <Suspense fallback={<h2>...Loading</h2>}>
         <Routes>
           <Route path='/' element={<Home />} />
